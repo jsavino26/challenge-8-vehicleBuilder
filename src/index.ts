@@ -8,10 +8,10 @@ import Vehicle from "./classes/Vehicle";
 import wheel from "./classes/Wheel";
 
 // create an array of vehicles
-const vehicles = [];
+const vehicles: (Car | Truck | Motorbike)[] = [];
 
 // TODO: uncomment once trucks are implemented
-const truck1 = new Truck(Cli.generateVin(),"red", "Ford", "F-150", 2021, 5000, 120, [], 10000);
+const truck1 = new Truck(Cli.generateVin(),"red", "Ford", "F-150", 2021, 5000, 120, 10000, []);
 
 // will use default wheels
 const car1 = new Car(

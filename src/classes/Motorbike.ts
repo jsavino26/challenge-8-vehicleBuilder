@@ -13,11 +13,11 @@ class Motorbike extends Vehicle {
   weight: number;
   topSpeed: number;
   wheels: Wheel[];
-  // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
-  // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
-
-  // TODO: Create a constructor that accepts the properties of the Motorbike class
-  constructor(
+  
+ // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
+ // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
+ // TODO: Create a constructor that accepts the properties of the Motorbike class
+   constructor(
     vin: string,
     color: string,
     make: string,
@@ -55,6 +55,8 @@ class Motorbike extends Vehicle {
   // TODO: The method should call the printDetails method of the parent class
     super.printDetails();
   // TODO: The method should log the details of the Motorbike
+  // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
+    console.log(`Motorbike Details:`);
     console.log(`VIN: ${this.vin}`);
     console.log(`Color: ${this.color}`);
     console.log(`Make: ${this.make}`);
@@ -62,9 +64,8 @@ class Motorbike extends Vehicle {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
-  }
-  // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
-  
+    console.log(`Wheels: ${this.wheels.map(wheel => wheel.getDiameter).join(', ')}`);
+  } 
 }
 
 // Export the Motorbike class as the default export
