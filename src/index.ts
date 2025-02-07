@@ -1,11 +1,9 @@
 // import classes
-import Truck from "./classes/Truck";
 import Car from "./classes/Car";
 import Motorbike from "./classes/Motorbike";
+import Truck from "./classes/Truck";
 import Wheel from "./classes/Wheel";
 import Cli from "./classes/Cli";
-import Vehicle from "./classes/Vehicle";
-import wheel from "./classes/Wheel";
 
 // create an array of vehicles
 const vehicles: (Car | Truck | Motorbike)[] = [];
