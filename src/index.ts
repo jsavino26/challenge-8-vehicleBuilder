@@ -1,16 +1,15 @@
 // import classes
-import Car from "./classes/Car";
-import Motorbike from "./classes/Motorbike";
-import Truck from "./classes/Truck";
-import Wheel from "./classes/Wheel";
-import Cli from "./classes/Cli";
+import Car from "./classes/Car.js";
+import Motorbike from "./classes/Motorbike.js";
+import Truck from "./classes/Truck.js";
+import Wheel from "./classes/Wheel.js";
+import Cli from "./classes/Cli.js";
 
 // create an array of vehicles
 const vehicles: (Car | Truck | Motorbike)[] = [];
 
 // TODO: uncomment once trucks are implemented
 const truck1 = new Truck(Cli.generateVin(),"red", "Ford", "F-150", 2021, 5000, 120, 10000, []);
-
 // will use default wheels
 const car1 = new Car(
   Cli.generateVin(),
