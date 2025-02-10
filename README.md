@@ -14,7 +14,7 @@
   - [Questions](#questions)
 
   ## Walkthrough Video
- <iframe src="https://drive.google.com/file/d/1227O0TSgV3dpKlrumoZXTYZc5ALw6tRp/preview" width="640" height="480" allow="autoplay"></iframe>
+ <iframe src="https://drive.google.com/file/d/108n5YwVNQhv_wOGbqBPJrg4Flw5_1-9R/preview" width="640" height="480"></iframe>
   
   ## Installation
   To be used in conjunction with inquirer package. Download inquirer package and clone the reposity: git clone https://github.com/jsavino26/challenge-8-vehiclebuilder.git. 
