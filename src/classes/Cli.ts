@@ -325,6 +325,8 @@ class Cli {
             'Reverse',
             'Select or create another vehicle',
             'Exit',
+            'Tow',
+            'Wheelie',
           ],
         },
       ])
@@ -408,6 +410,7 @@ class Cli {
         } else {
           // exit the cli if the user selects exit
           this.exit = true;
+          return;
         }
         if (!this.exit) {
           // if the user does not want to exit, perform actions on the selected vehicle
