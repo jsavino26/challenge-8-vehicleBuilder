@@ -12,7 +12,8 @@ class Motorbike extends Vehicle {
   year: number;
   weight: number;
   topSpeed: number;
-  wheels: Wheel[];
+  frontWheel: Wheel;
+  backWheel: Wheel;
   
  // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
  // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
@@ -25,7 +26,8 @@ class Motorbike extends Vehicle {
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: Wheel[]
+    frontWheel: Wheel,
+    backWheel: Wheel
   ) {
     // TODO: The constructor should call the constructor of the parent class, Vehicle
     super();
@@ -37,11 +39,17 @@ class Motorbike extends Vehicle {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
+    this.frontWheel = frontWheel;
+    this.backWheel = backWheel;
     // TODO: The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
-    if (wheels.length !== 2) {
-      this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
+    if (!frontWheel || !backWheel) {
+      // If not, use default wheels
+      this.frontWheel = new Wheel();
+      this.backWheel = new Wheel();
     } else {
-      this.wheels = wheels;
+      // Assign the passed in front and rear wheels
+      this.frontWheel = frontWheel;
+      this.backWheel = backWheel;
     }
   }
   // TODO: Implement the wheelie method
@@ -64,7 +72,8 @@ class Motorbike extends Vehicle {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
-    console.log(`Wheels: ${this.wheels.map(wheel => wheel.getDiameter).join(', ')}`);
+    console.log(`Front Wheel Diameter: ${this.frontWheel.getDiameter} inches`);
+    console.log(`Rear Wheel Diameter: ${this.backWheel.getDiameter} inches`);
   } 
 }
 
